@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Webpage</title>
+    <link rel="stylesheet" href="Collegewebsite2.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to XYZ College</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showTab('home')">Home</a></li>
+                <li><a href="#admission" onclick="showTab('admission')">Admission</a></li>
+                <li><a href="#contact" onclick="showTab('contact')">Contact</a></li>
+                <li><a href="#infrastructure" onclick="showTab('infrastructure')">Infrastructure</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="tab-content">
+            <h2>Home</h2>
+            <p>Welcome to XYZ College, where education meets excellence. Our campus is a hub of learning and innovation.</p>
+        </section>
+        <section id="admission" class="tab-content">
+            <h2>Admission</h2>
+            <p>Our admission process is designed to identify the best and brightest students. Apply now to join us!</p>
+        </section>
+        <section id="contact" class="tab-content">
+            <h2>Contact</h2>
+            <p>You can reach us at contact@xyzcollege.edu or call us at (123) 456-7890.</p>
+        </section>
+        <section id="infrastructure" class="tab-content">
+            <h2>Infrastructure</h2>
+            <p>Our college boasts state-of-the-art facilities including modern classrooms, labs, and a well-stocked library.</p>
+        </section>
+    </main>
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(tabId).style.display = 'block';
+        }
+        // Show the home tab by default
+        document.addEventListener('DOMContentLoaded', () => showTab('home'));
+    </script>
+</body>
+</html>
