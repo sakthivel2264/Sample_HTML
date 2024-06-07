@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="text">Hello, World!</div>
+</body>
+<style>
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: #4CAF50;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        animation: slideIn 2s ease-out;
+    }
+    .text {
+        font-size: 24px;
+        color: #333;
+        animation: fadeIn 3s ease-in;
+    }
+</style>
+</html>
